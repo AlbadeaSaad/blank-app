@@ -3,5 +3,5 @@ numpy
 ultralytics
 streamlit
 pandas
-PIL
+pillow
 torch
