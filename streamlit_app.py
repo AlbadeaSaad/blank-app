@@ -26,7 +26,7 @@ cap = cv2.VideoCapture(uploaded_file)
 w, h, fps = cap.get(cv2.CAP_PROP_FRAME_WIDTH), cap.get(cv2.CAP_PROP_FRAME_HEIGHT), cap.get(cv2.CAP_PROP_FPS)
 
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.videoWriter('output.mp4', fourcc, fps, (w,h))
+out = cv2.VideoWriter('output.mp4', fourcc, fps, (w,h))
 
 while cap.isOpened():
     # Read a frame from the video
