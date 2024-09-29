@@ -15,7 +15,7 @@ st.set_page_config(
 # -----------------------------------------------------------------------------
 
 # Load the model
-model = YOLO('yolov8n.pt')
+model = YOLO("best.pt")
 
 # Streamlit app
 st.title("Image Classification with PyTorch")
