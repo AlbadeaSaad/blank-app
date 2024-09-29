@@ -21,8 +21,13 @@ model = YOLO("best.pt")
 st.title("Image Classification with PyTorch")
 
 # File uploader
-uploaded_file = st.file_uploader('choose5555 a video...', type=['mp4'])
-cap = cv2.VideoCapture(uploaded_file)
+uploaded_file = st.file_uploader('choose a video...', type=['mp4'])
+
+if uploaded_file is not None:
+    # Get the file name
+    file_name = uploaded_file.name
+
+cap = cv2.VideoCapture(file_name+".mp4")
 w, h, fps = cap.get(cv2.CAP_PROP_FRAME_WIDTH), cap.get(cv2.CAP_PROP_FRAME_HEIGHT), cap.get(cv2.CAP_PROP_FPS)
 
 width = 640
@@ -59,5 +64,5 @@ cap.release()
 
     # Visualize results
     #annotated_frame = results[0].plot()  # Get the annotated image
-
+#video_bytes = out.read()
 st.video(out)
