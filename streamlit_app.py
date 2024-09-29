@@ -55,4 +55,5 @@ cap.release()
 
     # Visualize results
     #annotated_frame = results[0].plot()  # Get the annotated image
-st.video(out, format="video/mp4", start_time=0, *, subtitles=None, end_time=None, loop=False, autoplay=False, muted=False)
+video_bytes = out.read()
+st.video(video_bytes)
