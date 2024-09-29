@@ -21,7 +21,7 @@ model = YOLO("best.pt")
 st.title("Image Classification with PyTorch")
 
 # File uploader
-uploaded_file = st.file_uploader('choose a video...', type=['mp4'])
+uploaded_file = st.file_uploader('choose5555 a video...', type=['mp4'])
 cap = cv2.VideoCapture(uploaded_file)
 w, h, fps = cap.get(cv2.CAP_PROP_FRAME_WIDTH), cap.get(cv2.CAP_PROP_FRAME_HEIGHT), cap.get(cv2.CAP_PROP_FPS)
 
